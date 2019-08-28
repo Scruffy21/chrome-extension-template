@@ -1,0 +1,44 @@
+{
+    "name": "Pomocnik Allegro",
+    "version": "1.1.2",
+    "description": "Filtrowanie ofert na Allegro.pl",
+    "manifest_version": 2,
+    "options_page": "options.html",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "<all_urls>"
+    ],
+    "optional_permissions": [
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "background": {
+        "scripts": ["dist/background/background1.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        { 
+            "matches": [ "https://google.com/*" ], 
+            "run_at": "document_idle",
+            "css": ["src/inject/style1.css"],
+            "js": ["dist/inject/content1.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "images/icons/*.png"
+    ],
+    "browser_action": {
+        "default_popup": "pages/popup.html",
+        "default_title": "Title",
+        "default_icon": {
+            "16": "images/regular_16.png",
+            "48": "images/regular_48.png"
+        }
+    },
+    "icons": {
+        "16": "images/regular_16.png",
+        "48": "images/regular_48.png",
+        "128": "images/regular_128.png"
+    }
+}

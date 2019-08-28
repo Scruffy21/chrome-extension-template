@@ -1,0 +1,153 @@
+html {
+    margin:0;
+    padding: 0;
+    font-size: 25px;
+}
+
+body {
+    /* background: #fff4e4; */
+}
+
+.site-header {
+    font-size: 1.1rem;
+}
+
+main {
+    /* border: 1px solid black; */
+}
+
+section {
+    max-width: 700px;
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid black;
+    padding: 0 30px 30px 30px;
+}
+
+section header {
+    /* margin: auto; */
+    /* text-align: center; */
+    margin: 10px auto 30px 0;
+    position: relative;
+    width: max-content;
+}
+
+section header:after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    bottom: -10px;
+    /* margin: 0 auto; */
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgb(255, 231, 204);
+}
+
+#slider {
+    margin: 50px auto 50px auto;
+}
+
+.noUi-connect {
+    background-color: #ff7c00;
+}
+
+#blacklist {
+    /* width: 100px;
+    height: 100px;
+    background-color: aquamarine; */
+}
+
+/* fixing tagify bug or smth */
+.tagify tag>div::before{
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-box-shadow: 0 0 0 20px #e5e5e5 inset;
+    box-shadow: 0 0 0 20px #e5e5e5 inset;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-transition: 120ms ease;
+    -o-transition: 120ms ease;
+    transition: 120ms ease;
+    -webkit-animation: .3s tags--bump 1 ease-out;
+    animation: .3s tags--bump 1 ease-out
+}
+.tagify tag:hover:not([readonly]) div::before{
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    -webkit-box-shadow: 0 0 0 20px #d3e2e2 inset;
+    box-shadow: 0 0 0 20px #d3e2e2 inset;
+}
+
+.warning {
+    font-style: italic;
+    font-size: 0.6rem;
+}
+
+/* SAVE SECTION */
+
+.save-btn {
+	background-color: #44c767;
+	border-radius: 4px;
+	border: 1px solid #18ab29;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 1rem;
+	padding: 16px 31px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #2f6627;
+}
+.save-btn:hover {
+	background-color: #5cbf2a;
+}
+
+.save-btn:active {
+	position: relative;
+	top: 1px;
+}
+
+.save-result {
+    display: inline-block;
+}
+
+
+
+/* WTF-FORMS */
+.control {
+    /* display: block; */
+    /* padding: 10px; */
+    /* font-size: 15px; */
+}
+
+.control-indicator {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.select select {
+    font-size: 0.8rem;
+    padding: .2rem 2rem .2rem 1rem;
+}
+
+
+.hideSections label {
+    display: block;
+}
+
+.disclaimer {
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    font-size: 0.6rem;
+    margin: 50px auto auto auto;
+    max-width: 1000px;
+}

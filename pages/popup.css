@@ -1,0 +1,76 @@
+html {
+    margin:0;
+    padding: 0;
+    font-size: 25px;
+    background: #f0f9ff;
+    overflow-y: hidden;
+}
+
+.main-sections {
+    /* max-width: 700px; */
+    width: 90%;
+    margin: auto;
+    /* border-top: 1px solid black; */
+    padding: 0 30px 15px 30px;
+}
+
+.main-sections header {
+    /* margin: auto; */
+    /* text-align: center; */
+    margin: 10px auto 15px 0;
+    position: relative;
+    width: max-content;
+}
+
+.main-sections header:after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    bottom: -10px;
+    /* margin: 0 auto; */
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgb(159, 206, 233);
+}
+
+.small-section {
+    padding-top: 10px;
+}
+
+.explanation {
+    font-size: 0.6rem;
+}
+
+.highlight {
+    
+}
+
+/* WTF-FORMS */
+.control {
+    /* display: block; */
+    /* padding: 10px; */
+    /* font-size: 15px; */
+}
+
+.control-indicator {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.select select {
+    font-size: 0.8rem;
+    padding: .2rem 2rem .2rem 1rem;
+}
+
+.note {
+    font-style: italic;
+    font-size: 0.6rem;
+}
+
+/* CHOSEN */
+.chosen-container {
+    /* display: block; */
+    /* width: auto; */
+    /* max-width: 400px; */
+}
