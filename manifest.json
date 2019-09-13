@@ -14,15 +14,15 @@
         "webRequestBlocking"
     ],
     "background": {
-        "scripts": ["dist/background/background1.js"],
+        "scripts": ["dist/background/background.js"],
         "persistent": false
     },
     "content_scripts": [
         { 
             "matches": [ "https://google.com/*" ], 
             "run_at": "document_idle",
-            "css": ["src/inject/style1.css"],
-            "js": ["dist/inject/content1.js"]
+            "css": ["css/inject/style.css"],
+            "js": ["dist/inject/inject.js"]
         }
     ],
     "web_accessible_resources": [
