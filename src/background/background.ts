@@ -1,3 +1,7 @@
+declare var browser: typeof chrome;
+// @ts-ignore
+const _browser = chrome || browser;
+
 console.log("in background script");
 chrome.runtime.onInstalled.addListener(function () {
     console.log("oninstalled run");

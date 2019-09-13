@@ -1,0 +1,24 @@
+{
+  "name": "extension-template",
+  "version": "1.0.0",
+  "description": "This file can be used as a template for creating Chrome and Firefox extensions. It aims to contain most of possible manifest options.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scruffy21/chrome-extension-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scruffy21/chrome-extension-template/issues"
+  },
+  "homepage": "https://github.com/Scruffy21/chrome-extension-template#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.88",
+    "typescript": "^3.6.3"
+  }
+}
