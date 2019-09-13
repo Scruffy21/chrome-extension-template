@@ -3,16 +3,16 @@ declare var browser: typeof chrome;
 const _browser = chrome || browser;
 
 console.log("in background script");
-chrome.runtime.onInstalled.addListener(function () {
+_browser.runtime.onInstalled.addListener(function () {
     console.log("oninstalled run");
 });
 
-chrome.browserAction.onClicked.addListener(function (tab) {
+_browser.browserAction.onClicked.addListener(function (tab) {
     console.log('browser action button was clicked');
 });
 
 
-chrome.runtime.onMessage.addListener(
+_browser.runtime.onMessage.addListener(
     function(message, sender, sendResponse) {
         if (message.reason === 'greeting') {
             console.log('greeting message received');

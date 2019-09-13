@@ -1,6 +1,10 @@
+declare var browser: typeof chrome;
+// @ts-ignore
+const _browser = chrome || browser;
+
 console.log('IN INJECTED SCRIPT');
 
-chrome.storage.sync.get("config", response => {
+_browser.storage.sync.get("config", response => {
 
 });
 
