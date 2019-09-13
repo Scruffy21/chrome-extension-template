@@ -8,3 +8,9 @@ _browser.storage.sync.get("config", response => {
 
 });
 
+// notice, only request is here, because this received message from the background page
+_browser.runtime.onMessage.addListener(request => {
+    if (request === 'message1') {
+        
+    }
+});

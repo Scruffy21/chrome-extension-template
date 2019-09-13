@@ -1,4 +1,8 @@
-chrome.storage.sync.get("config", response => {
+declare var browser: typeof chrome;
+// @ts-ignore
+const _browser = chrome || browser;
+
+_browser.storage.sync.get("config", response => {
     const config = response.config;
 
 });
@@ -13,8 +17,8 @@ function saveToStorage() {
         employerPropertiesOne: el4,
         openAttachments: el5
     }
-    chrome.storage.sync.set({ config: config }, () => {
-        const result = chrome.runtime.lastError ? "There was an error while saving." : "Changes have been saved!";
+    _browser.storage.sync.set({ config: config }, () => {
+        const result = _browser.runtime.lastError ? "There was an error while saving." : "Changes have been saved!";
         console.log(result);
     });    
 }
