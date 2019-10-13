@@ -14,3 +14,8 @@ _browser.runtime.onMessage.addListener(request => {
         
     }
 });
+
+// send message to background
+_browser.runtime.sendMessage(
+    { action: 'action1', payload: 12345 }
+);
