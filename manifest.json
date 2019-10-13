@@ -1,9 +1,9 @@
 {
-    "name": "Pomocnik Allegro",
-    "version": "1.1.2",
-    "description": "Filtrowanie ofert na Allegro.pl",
+    "name": "YOUR EXTENSION NAME",
+    "version": "0.0.1",
+    "description": "YOUR EXTENSION TITLE",
     "manifest_version": 2,
-    "options_page": "options.html",
+    "options_page": "./pages/options.html",
     "permissions": [
         "activeTab",
         "storage",
@@ -14,31 +14,31 @@
         "webRequestBlocking"
     ],
     "background": {
-        "scripts": ["dist/background/background.js"],
+        "scripts": ["./dist/background/background.js"],
         "persistent": false
     },
     "content_scripts": [
         { 
             "matches": [ "https://google.com/*" ], 
             "run_at": "document_idle",
-            "css": ["css/inject/style.css"],
-            "js": ["dist/inject/inject.js"]
+            "css": ["./css/inject/style.css"],
+            "js": ["./dist/inject/inject.js"]
         }
     ],
     "web_accessible_resources": [
-        "images/icons/*.png"
+        "images/**/*.png"
     ],
     "browser_action": {
-        "default_popup": "pages/popup.html",
+        "default_popup": "./pages/popup.html",
         "default_title": "Title",
         "default_icon": {
-            "16": "images/regular_16.png",
-            "48": "images/regular_48.png"
+            "16": "./images/icons/icon.png",
+            "48": "./images/icons/icon.png"
         }
     },
     "icons": {
-        "16": "images/regular_16.png",
-        "48": "images/regular_48.png",
-        "128": "images/regular_128.png"
+        "16": "./images/icons/icon.png",
+        "48": "./images/icons/icon.png",
+        "128": "./images/icons/icon.png"
     }
 }
