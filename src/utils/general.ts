@@ -1,0 +1,1 @@
+const sleep = (time: number) => new Promise((resolve) => window.setTimeout(resolve, time));

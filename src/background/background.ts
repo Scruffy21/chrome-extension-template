@@ -11,11 +11,13 @@ _browser.browserAction.onClicked.addListener(function (tab) {
     console.log('browser action button was clicked');
 });
 
-
 _browser.runtime.onMessage.addListener(
-    function(message, sender, sendResponse) {
-        if (message.reason === 'greeting') {
-            console.log('greeting message received');
+    function (message, sender, sendResponse) {
+        if (message.action === 'action1') {
+            console.log('execute action1...');
+        }
+        else if (message.action === 'action2') {
+            console.log('execute action2...');
         }
     }
 );
