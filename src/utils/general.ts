@@ -27,3 +27,14 @@ function promisify(fn: Function, args: any) {
         }
     });
 }
+
+function dispatchChangeEvent(targetElement: HTMLElement) {
+    var event = new Event('change');
+    targetElement.dispatchEvent(event);
+}
+
+function getActiveTab() {
+    return new Promise((resolve, reject) => {
+        chrome.tabs.query({ active: true, currentWindow: true }, tabs => resolve(tabs[0]));
+    });
+}
